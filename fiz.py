@@ -1,21 +1,12 @@
-
-from tkinter import font
-from turtle import position, title, width
-from click import style
-import dash
-import dash_auth
-from dash import Dash, dcc, html, Input, Output, dash_table, State
+from dash import Dash, dcc, html, Input, Output, dash_table
 import dash_table.FormatTemplate as FormatTemplate
 from numpy import size
 import plotly.express as px
 import plotly.graph_objs as go
-from plotly.subplots import make_subplots
 import pandas as pd
-import psycopg2 
-import sqlalchemy
 from sqlalchemy import create_engine
 import dash_bootstrap_components as dbc
-from dash_bootstrap_components._components.Container import Container
+
 
 REMOTE_DATABASE_URI = 'postgresql+psycopg2://hpxywmetxvdawa:15a82606c74096ef3ae1c2155a224058e2676df9667b59a8e50b16939824e0b6@ec2-44-195-169-163.compute-1.amazonaws.com:5432/daf3hf8l7lq7rl'
 
