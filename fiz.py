@@ -12,7 +12,7 @@ REMOTE_DATABASE_URI = 'postgresql+psycopg2://hpxywmetxvdawa:15a82606c74096ef3ae1
 
 
 app = Dash(__name__,title='Financial Insight Zambia Dashboard',meta_tags=[{'name': 'viewport',
-                            'content': 'width=device-width, initial-scale=1.0'}])
+                            'content': 'width=device-width, initial-scale=1.0, maximum-scale=1.2, minimum-scale=0.5,'}])
 server =app.server
 
 engine = create_engine(REMOTE_DATABASE_URI)
@@ -255,7 +255,7 @@ html.Div([
                                                                                                                     dbc.CardHeader(dcc.Markdown(children=markdown_text7)),
                                                                                                                     dbc.CardBody([dcc.Graph(id='revenue', figure=fig4, style=dict(height='200px'))])
                                                                                                                 ])
-                                                                                                    ])
+                                                                                                    ],xs=12, sm=12, md=12, lg=12, xl=12)
                                                                                                     
                                                                                            ]),
 
@@ -266,15 +266,15 @@ html.Div([
                                                                                                                     dbc.CardHeader(dcc.Markdown(children=markdown_text8)),
                                                                                                                     dbc.CardBody([dcc.Graph(id='profit', figure=fig5, style=dict(height='200px'))])
                                                                                                                 ], className='profit')
-                                                                                                    ])
+                                                                                                    ],xs=12, sm=12, md=12, lg=12, xl=12)
                                                                                             
                                                                                            ])
                                                                         
 
                                                                         
 
-                                                                        ],
-                                                                        width=5),
+                                                                        ],xs=10, sm=10, md=10, lg=5, xl=5,
+                                                                        ),
                                                                 
                                                             dbc.Col([
                                                                         dbc.Card([
@@ -283,8 +283,8 @@ html.Div([
                                                                                     
                                                                                     
                                                             ]),
-                                                            ],width=7)
-                                                ]),
+                                                            ],xs=12, sm=12, md=12, lg=7, xl=7,)
+                                                ], justify="center"),
 
                                                 
                                                 
@@ -311,8 +311,7 @@ html.Div([
                                                 
                            ]),
                           
-                                    ],
-                                    width=5
+                                    ],xs=12, sm=12, md=12, lg=5, xl=5,
                                     ),
 
                         dbc.Col([
@@ -324,8 +323,7 @@ html.Div([
                                                 
                            ]),
                           
-                                    ],
-                                    width=7
+                                    ],xs=12, sm=12, md=12, lg=7, xl=7
                                     )
                 
             ])
