@@ -88,7 +88,9 @@ def update_line(selected_company):
 
     data =[trace1, trace2, trace3, trace4]
     layout = go.Layout(
-    xaxis = dict(title ='Year')
+    xaxis = dict(title ='Year'),
+    paper_bgcolor='rgba(0,0,0,0)',
+    plot_bgcolor='rgba(0,0,0,0)'
     ) 
     fig5 =go.Figure(data=data, layout=layout)
 
@@ -263,7 +265,7 @@ html.Div([
                                                                                                         dbc.Card([
                                                                                                                     dbc.CardHeader(dcc.Markdown(children=markdown_text8)),
                                                                                                                     dbc.CardBody([dcc.Graph(id='profit', figure=fig5, style=dict(height='200px'))])
-                                                                                                                ],className='div')
+                                                                                                                ], className='profit')
                                                                                                     ])
                                                                                             
                                                                                            ])

@@ -99,6 +99,11 @@
           font-family: sans-serif;
 }
 
+.profit{
+
+        margin-top: 20px;
+}
+
 @media (prefers-reduced-motion: no-preference) {
   :root {
     scroll-behavior: smooth;
