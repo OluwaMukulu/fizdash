@@ -338,7 +338,7 @@ html.Div([
                            dbc.Col([
                                     dbc.Card([
                                                 dbc.CardHeader(dcc.Markdown(children=markdown_text4)),
-                                                dbc.CardBody([dbc.Label('Select year:'),dcc.Dropdown(id='year-picker-sc',options=year_options,value=df['year'].max(),style={'width':'29%'}),dcc.Graph(id='graph-with-dropdown')]),
+                                                dbc.CardBody([dbc.Label('Select year:'),dcc.Dropdown(id='year-picker-sc',options=year_options,value=df['year'].max(),style={'width':'40%'}),dcc.Graph(id='graph-with-dropdown')]),
                                                 
                            ]),
                           
