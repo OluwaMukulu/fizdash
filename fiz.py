@@ -380,8 +380,8 @@ html.Div([
                                                                                                                             precision=2,
                                                                                                                             group=Group.yes,
                                                                                                                             groups=3,
-                                                                                                                            group_delimiter='.',
-                                                                                                                            decimal_delimiter=',',
+                                                                                                                            group_delimiter=',',
+                                                                                                                            decimal_delimiter='.',
                                                                                                                             symbol=Symbol.yes, 
                                                                                                                             symbol_prefix=u'ZMW')
                                                                                                     },
