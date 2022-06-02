@@ -1,6 +1,5 @@
 from dash import Dash, dcc, html, Input, Output, dash_table
-import dash_table.FormatTemplate as FormatTemplate
-from numpy import size
+from dash_table.Format import Format, Group, Scheme, Symbol
 import plotly.express as px
 import plotly.graph_objs as go
 import pandas as pd
@@ -11,7 +10,7 @@ import dash_bootstrap_components as dbc
 REMOTE_DATABASE_URI = 'postgresql+psycopg2://hpxywmetxvdawa:15a82606c74096ef3ae1c2155a224058e2676df9667b59a8e50b16939824e0b6@ec2-44-195-169-163.compute-1.amazonaws.com:5432/daf3hf8l7lq7rl'
 
 
-app = Dash(__name__,title='Financial Insight Zambia Dashboard',meta_tags=[{'name': 'viewport',
+app = Dash(__name__,title='Dashboard - Financial Insight Zambia',meta_tags=[{'name': 'viewport',
                             'content': 'width=device-width, initial-scale=1.0, maximum-scale=1.2, minimum-scale=0.5,'}])
 server =app.server
 
@@ -35,12 +34,13 @@ def update_line(selected_company):
     df2 = df[df.instrument.isin([selected_company])]
     
     fig = px.bar(df2, x='eps', y='year',
-             hover_data=['eps', 'revenue', 'profit'], color='profit',
+             hover_name='company',hover_data=['eps', 'revenue', 'profit'], color='profit',
              labels={'eps':'EPS','year':'Year','profit':'Profit','revenue':'Revenue'}, orientation='h')
 
     fig.update_layout(
                         paper_bgcolor='rgba(0,0,0,0)',
-                        plot_bgcolor='rgba(0,0,0,0)'
+                        plot_bgcolor='rgba(0,0,0,0)',
+                        
                       )
     
     return fig
@@ -54,14 +54,14 @@ def update_line(selected_company):
     trace1 = go.Bar(
     x=bar_df['year'], 
     y=bar_df['revenue'],
-    name = 'Revenue $',
+    name = 'Revenue ZMW',
     marker=dict(color='#A020F0')
     )
 
     trace2 =go.Bar(
     x=bar_df['year'],
     y=bar_df['profit'],
-    name='Profit $',
+    name='Profit ZMW',
     marker=dict(color='#00FF00')
 
     )
@@ -103,7 +103,7 @@ def update_line(selected_company):
 def update_pie(selected_year):
     filtered_df = df[df.year == selected_year]
     filtered_df.loc[df['revenue'] < 2.e4, 'company'] = 'Other companies'
-    fig2 = px.pie(filtered_df, values='revenue', names='instrument',hole=0.5,hover_data=['company'], labels={'revenue':'Revenue','company':'Company','instrument':'Instrument','profit':'Profit'})
+    fig2 = px.pie(filtered_df, values='revenue', names='instrument',hole=0.5,hover_name='company',hover_data=['revenue'], labels={'revenue':'Revenue','company':'Company','profit':'Profit', 'instrument':'Ticker'})
     fig2.update_traces(textposition='inside', textinfo='percent+label')
     fig2.update_layout(transition_duration=200)
 
@@ -117,14 +117,14 @@ def update_bubble(selected_year):
 
     fig3 = px.scatter(filtered_df2, x="profit", y="revenue", 
                     labels={
-                     "profit": "Profit",
-                     "revenue": "Revenue",
+                     "profit": "Profit ZMW",
+                     "revenue": "Revenue ZMW",
                      'company':'Company',
                      'eps':'Earnings Per Share'
                  },
                  
                     size='eps',
-                     color="company", hover_name="instrument",
+                     color="instrument", hover_name="company",
                      log_x=True, log_y=True, size_max=55)
 
     fig3.update_layout(transition_duration=200)
@@ -141,7 +141,7 @@ prev_rev = df4['revenue'].sum()
 
 fig4 = go.Figure(go.Indicator(
         mode="number+delta",
-        number = {'prefix': "$","font":{"size":50}},
+        number = {'prefix': "ZMW","font":{"size":50}},
         value=curr_rev,
         title=dict(text=str(curr_yr), font=dict(size=20)),
         delta = {'reference': prev_rev, 'relative': True, 'position' : "bottom", 'valueformat':'.0%',"font":{"size":30}}
@@ -165,7 +165,7 @@ curr_prf = df3['profit'].sum()
 prev_prf = df4['profit'].sum()
 fig5 = go.Figure(go.Indicator(
         mode="number+delta",
-        number = {'prefix': "$","font":{"size":50}},
+        number = {'prefix': "ZMW","font":{"size":50}},
         value=curr_prf,
         title=dict(text=str(curr_yr), font=dict(size=20)),
         delta = {'reference': prev_prf, 'relative': True, 'position' : "bottom", 'valueformat':'.0%',"font":{"size":30}}
@@ -375,13 +375,29 @@ html.Div([
                                                                                                         "name": "Profit",
                                                                                                         "id": "profit",
                                                                                                         "type": "numeric",
-                                                                                                        "format": FormatTemplate.money(0),
+                                                                                                        "format":Format(
+                                                                                                                            scheme=Scheme.fixed, 
+                                                                                                                            precision=2,
+                                                                                                                            group=Group.yes,
+                                                                                                                            groups=3,
+                                                                                                                            group_delimiter='.',
+                                                                                                                            decimal_delimiter=',',
+                                                                                                                            symbol=Symbol.yes, 
+                                                                                                                            symbol_prefix=u'ZMW')
                                                                                                     },
                                                                                                     {
                                                                                                         "name": "Revenue",
                                                                                                         "id": "revenue",
                                                                                                         "type": "numeric",
-                                                                                                        "format": FormatTemplate.money(0),
+                                                                                                        "format": Format(
+                                                                                                                            scheme=Scheme.fixed, 
+                                                                                                                            precision=2,
+                                                                                                                            group=Group.yes,
+                                                                                                                            groups=3,
+                                                                                                                            group_delimiter=',',
+                                                                                                                            decimal_delimiter='.',
+                                                                                                                            symbol=Symbol.yes, 
+                                                                                                                            symbol_prefix=u'ZMW')
                                                                                                     },
                                                                                                     {
                                                                                                         "name": "Earnings Per Share",
