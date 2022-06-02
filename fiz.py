@@ -34,7 +34,7 @@ def update_line(selected_company):
     df2 = df[df.instrument.isin([selected_company])]
     
     fig = px.bar(df2, x='eps', y='year',
-             hover_name='company',hover_data=['eps', 'revenue', 'profit'], color='profit',
+             hover_name='eps',hover_data=['eps', 'revenue', 'profit'], color='profit',
              labels={'eps':'EPS','year':'Year','profit':'Profit','revenue':'Revenue'}, orientation='h')
 
     fig.update_layout(
@@ -117,10 +117,11 @@ def update_bubble(selected_year):
 
     fig3 = px.scatter(filtered_df2, x="profit", y="revenue", 
                     labels={
-                     "profit": "Profit ZMW",
-                     "revenue": "Revenue ZMW",
+                     "profit": "Profit ",
+                     "revenue": "Revenue",
                      'company':'Company',
-                     'eps':'Earnings Per Share'
+                     'eps':'Earnings Per Share',
+                     'instrument':'Ticker'
                  },
                  
                     size='eps',
