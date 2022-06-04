@@ -103,8 +103,8 @@ def update_line(selected_company):
 def update_pie(selected_year):
     filtered_df = df[df.year == selected_year]
     filtered_df.loc[df['revenue'] < 2.e4, 'company'] = 'Other companies'
-    fig2 = px.pie(filtered_df, values='revenue', names='instrument',hole=0.5,hover_name='company',hover_data=['revenue','profit','company'], labels={'revenue':'Revenue','company':'Company','profit':'Profit', 'instrument':'Ticker'})
-    fig2.update_traces(textposition='inside', textinfo='percent+label',hovertemplate='Revenue:ZMW%{value:symbol}', selector=dict(type='pie'))
+    fig2 = px.pie(filtered_df, values='revenue', names='instrument',hole=0.5,hover_name='company',hover_data=['revenue'], labels={'revenue':'Revenue','instrument':'Ticker'})
+    fig2.update_traces(textposition='inside', textinfo='percent+label')
     fig2.update_layout(transition_duration=200)
 
     return fig2
