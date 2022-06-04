@@ -12,452 +12,132 @@
     "categories": [],
     "screenshots": [],
     "icons": [
-        {
-            "src": "SmallTile.scale-100.png",
-            "sizes": "71x71"
-          },
           {
-            "src": "SmallTile.scale-125.png",
-            "sizes": "89x89"
-          },
-          {
-            "src": "SmallTile.scale-150.png",
-            "sizes": "107x107"
-          },
-          {
-            "src": "SmallTile.scale-200.png",
-            "sizes": "142x142"
-          },
-          {
-            "src": "SmallTile.scale-400.png",
-            "sizes": "284x284"
-          },
-          {
-            "src": "Square150x150Logo.scale-100.png",
-            "sizes": "150x150"
-          },
-          {
-            "src": "Square150x150Logo.scale-125.png",
-            "sizes": "188x188"
-          },
-          {
-            "src": "Square150x150Logo.scale-150.png",
-            "sizes": "225x225"
-          },
-          {
-            "src": "Square150x150Logo.scale-200.png",
-            "sizes": "300x300"
-          },
-          {
-            "src": "Square150x150Logo.scale-400.png",
-            "sizes": "600x600"
-          },
-          {
-            "src": "Wide310x150Logo.scale-100.png",
-            "sizes": "310x150"
-          },
-          {
-            "src": "Wide310x150Logo.scale-125.png",
-            "sizes": "388x188"
-          },
-          {
-            "src": "Wide310x150Logo.scale-150.png",
-            "sizes": "465x225"
-          },
-          {
-            "src": "Wide310x150Logo.scale-200.png",
-            "sizes": "620x300"
-          },
-          {
-            "src": "Wide310x150Logo.scale-400.png",
-            "sizes": "1240x600"
-          },
-          {
-            "src": "LargeTile.scale-100.png",
-            "sizes": "310x310"
-          },
-          {
-            "src": "LargeTile.scale-125.png",
-            "sizes": "388x388"
-          },
-          {
-            "src": "LargeTile.scale-150.png",
-            "sizes": "465x465"
-          },
-          {
-            "src": "LargeTile.scale-200.png",
-            "sizes": "620x620"
-          },
-          {
-            "src": "LargeTile.scale-400.png",
-            "sizes": "1240x1240"
-          },
-          {
-            "src": "Square44x44Logo.scale-100.png",
-            "sizes": "44x44"
-          },
-          {
-            "src": "Square44x44Logo.scale-125.png",
-            "sizes": "55x55"
-          },
-          {
-            "src": "Square44x44Logo.scale-150.png",
-            "sizes": "66x66"
-          },
-          {
-            "src": "Square44x44Logo.scale-200.png",
-            "sizes": "88x88"
-          },
-          {
-            "src": "Square44x44Logo.scale-400.png",
-            "sizes": "176x176"
-          },
-          {
-            "src": "StoreLogo.scale-100.png",
-            "sizes": "50x50"
-          },
-          {
-            "src": "StoreLogo.scale-125.png",
-            "sizes": "63x63"
-          },
-          {
-            "src": "StoreLogo.scale-150.png",
-            "sizes": "75x75"
-          },
-          {
-            "src": "StoreLogo.scale-200.png",
-            "sizes": "100x100"
-          },
-          {
-            "src": "StoreLogo.scale-400.png",
-            "sizes": "200x200"
-          },
-          {
-            "src": "SplashScreen.scale-100.png",
-            "sizes": "620x300"
-          },
-          {
-            "src": "SplashScreen.scale-125.png",
-            "sizes": "775x375"
-          },
-          {
-            "src": "SplashScreen.scale-150.png",
-            "sizes": "930x450"
-          },
-          {
-            "src": "SplashScreen.scale-200.png",
-            "sizes": "1240x600"
-          },
-          {
-            "src": "SplashScreen.scale-400.png",
-            "sizes": "2480x1200"
-          },
-          {
-            "src": "Square44x44Logo.targetsize-16.png",
-            "sizes": "16x16"
-          },
-          {
-            "src": "Square44x44Logo.targetsize-20.png",
-            "sizes": "20x20"
-          },
-          {
-            "src": "Square44x44Logo.targetsize-24.png",
-            "sizes": "24x24"
-          },
-          {
-            "src": "Square44x44Logo.targetsize-30.png",
-            "sizes": "30x30"
-          },
-          {
-            "src": "Square44x44Logo.targetsize-32.png",
-            "sizes": "32x32"
-          },
-          {
-            "src": "Square44x44Logo.targetsize-36.png",
-            "sizes": "36x36"
-          },
-          {
-            "src": "Square44x44Logo.targetsize-40.png",
-            "sizes": "40x40"
-          },
-          {
-            "src": "Square44x44Logo.targetsize-44.png",
-            "sizes": "44x44"
-          },
-          {
-            "src": "Square44x44Logo.targetsize-48.png",
-            "sizes": "48x48"
-          },
-          {
-            "src": "Square44x44Logo.targetsize-60.png",
-            "sizes": "60x60"
-          },
-          {
-            "src": "Square44x44Logo.targetsize-64.png",
-            "sizes": "64x64"
-          },
-          {
-            "src": "Square44x44Logo.targetsize-72.png",
-            "sizes": "72x72"
-          },
-          {
-            "src": "Square44x44Logo.targetsize-80.png",
-            "sizes": "80x80"
-          },
-          {
-            "src": "Square44x44Logo.targetsize-96.png",
-            "sizes": "96x96"
-          },
-          {
-            "src": "Square44x44Logo.targetsize-256.png",
-            "sizes": "256x256"
-          },
-          {
-            "src": "Square44x44Logo.altform-unplated_targetsize-16.png",
-            "sizes": "16x16"
-          },
-          {
-            "src": "Square44x44Logo.altform-unplated_targetsize-20.png",
-            "sizes": "20x20"
-          },
-          {
-            "src": "Square44x44Logo.altform-unplated_targetsize-24.png",
-            "sizes": "24x24"
-          },
-          {
-            "src": "Square44x44Logo.altform-unplated_targetsize-30.png",
-            "sizes": "30x30"
-          },
-          {
-            "src": "Square44x44Logo.altform-unplated_targetsize-32.png",
-            "sizes": "32x32"
-          },
-          {
-            "src": "Square44x44Logo.altform-unplated_targetsize-36.png",
-            "sizes": "36x36"
-          },
-          {
-            "src": "Square44x44Logo.altform-unplated_targetsize-40.png",
-            "sizes": "40x40"
-          },
-          {
-            "src": "Square44x44Logo.altform-unplated_targetsize-44.png",
-            "sizes": "44x44"
-          },
-          {
-            "src": "Square44x44Logo.altform-unplated_targetsize-48.png",
-            "sizes": "48x48"
-          },
-          {
-            "src": "Square44x44Logo.altform-unplated_targetsize-60.png",
-            "sizes": "60x60"
-          },
-          {
-            "src": "Square44x44Logo.altform-unplated_targetsize-64.png",
-            "sizes": "64x64"
-          },
-          {
-            "src": "Square44x44Logo.altform-unplated_targetsize-72.png",
-            "sizes": "72x72"
-          },
-          {
-            "src": "Square44x44Logo.altform-unplated_targetsize-80.png",
-            "sizes": "80x80"
-          },
-          {
-            "src": "Square44x44Logo.altform-unplated_targetsize-96.png",
-            "sizes": "96x96"
-          },
-          {
-            "src": "Square44x44Logo.altform-unplated_targetsize-256.png",
-            "sizes": "256x256"
-          },
-          {
-            "src": "Square44x44Logo.altform-lightunplated_targetsize-16.png",
-            "sizes": "16x16"
-          },
-          {
-            "src": "Square44x44Logo.altform-lightunplated_targetsize-20.png",
-            "sizes": "20x20"
-          },
-          {
-            "src": "Square44x44Logo.altform-lightunplated_targetsize-24.png",
-            "sizes": "24x24"
-          },
-          {
-            "src": "Square44x44Logo.altform-lightunplated_targetsize-30.png",
-            "sizes": "30x30"
-          },
-          {
-            "src": "Square44x44Logo.altform-lightunplated_targetsize-32.png",
-            "sizes": "32x32"
-          },
-          {
-            "src": "Square44x44Logo.altform-lightunplated_targetsize-36.png",
-            "sizes": "36x36"
-          },
-          {
-            "src": "Square44x44Logo.altform-lightunplated_targetsize-40.png",
-            "sizes": "40x40"
-          },
-          {
-            "src": "Square44x44Logo.altform-lightunplated_targetsize-44.png",
-            "sizes": "44x44"
-          },
-          {
-            "src": "Square44x44Logo.altform-lightunplated_targetsize-48.png",
-            "sizes": "48x48"
-          },
-          {
-            "src": "Square44x44Logo.altform-lightunplated_targetsize-60.png",
-            "sizes": "60x60"
-          },
-          {
-            "src": "Square44x44Logo.altform-lightunplated_targetsize-64.png",
-            "sizes": "64x64"
-          },
-          {
-            "src": "Square44x44Logo.altform-lightunplated_targetsize-72.png",
-            "sizes": "72x72"
-          },
-          {
-            "src": "Square44x44Logo.altform-lightunplated_targetsize-80.png",
-            "sizes": "80x80"
-          },
-          {
-            "src": "Square44x44Logo.altform-lightunplated_targetsize-96.png",
-            "sizes": "96x96"
-          },
-          {
-            "src": "Square44x44Logo.altform-lightunplated_targetsize-256.png",
-            "sizes": "256x256"
-          },
-          {
-            "src": "android-launchericon-512-512.png",
+            "src": "images/android-launchericon-512-512.png",
             "sizes": "512x512"
           },
           {
-            "src": "android-launchericon-192-192.png",
+            "src": "images/android-launchericon-192-192.png",
             "sizes": "192x192"
           },
           {
-            "src": "android-launchericon-144-144.png",
+            "src": "images/android-launchericon-144-144.png",
             "sizes": "144x144"
           },
           {
-            "src": "android-launchericon-96-96.png",
+            "src": "images/android-launchericon-96-96.png",
             "sizes": "96x96"
           },
           {
-            "src": "android-launchericon-72-72.png",
+            "src": "images/android-launchericon-72-72.png",
             "sizes": "72x72"
           },
           {
-            "src": "android-launchericon-48-48.png",
+            "src": "images/android-launchericon-48-48.png",
             "sizes": "48x48"
           },
           {
-            "src": "16.png",
+            "src": "images/16.png",
             "sizes": "16x16"
           },
           {
-            "src": "20.png",
+            "src": "images/20.png",
             "sizes": "20x20"
           },
           {
-            "src": "29.png",
+            "src": "images/29.png",
             "sizes": "29x29"
           },
           {
-            "src": "32.png",
+            "src": "images/32.png",
             "sizes": "32x32"
           },
           {
-            "src": "40.png",
+            "src": "images/40.png",
             "sizes": "40x40"
           },
           {
-            "src": "50.png",
+            "src": "images/50.png",
             "sizes": "50x50"
           },
           {
-            "src": "57.png",
+            "src": "images/57.png",
             "sizes": "57x57"
           },
           {
-            "src": "58.png",
+            "src": "images/58.png",
             "sizes": "58x58"
           },
           {
-            "src": "60.png",
+            "src": "images/60.png",
             "sizes": "60x60"
           },
           {
-            "src": "64.png",
+            "src": "images/64.png",
             "sizes": "64x64"
           },
           {
-            "src": "72.png",
+            "src": "images/72.png",
             "sizes": "72x72"
           },
           {
-            "src": "76.png",
+            "src": "images/76.png",
             "sizes": "76x76"
           },
           {
-            "src": "80.png",
+            "src": "images/80.png",
             "sizes": "80x80"
           },
           {
-            "src": "87.png",
+            "src": "images/87.png",
             "sizes": "87x87"
           },
           {
-            "src": "100.png",
+            "src": "images/100.png",
             "sizes": "100x100"
           },
           {
-            "src": "114.png",
+            "src": "images/114.png",
             "sizes": "114x114"
           },
           {
-            "src": "120.png",
+            "src": "images/120.png",
             "sizes": "120x120"
           },
           {
-            "src": "128.png",
+            "src": "images/128.png",
             "sizes": "128x128"
           },
           {
-            "src": "144.png",
+            "src": "images/144.png",
             "sizes": "144x144"
           },
           {
-            "src": "152.png",
+            "src": "images/152.png",
             "sizes": "152x152"
           },
           {
-            "src": "167.png",
+            "src": "images/167.png",
             "sizes": "167x167"
           },
           {
-            "src": "180.png",
+            "src": "images/180.png",
             "sizes": "180x180"
           },
           {
-            "src": "192.png",
+            "src": "images/192.png",
             "sizes": "192x192"
           },
           {
-            "src": "256.png",
+            "src": "images/256.png",
             "sizes": "256x256"
           },
           {
-            "src": "512.png",
+            "src": "images/512.png",
             "sizes": "512x512"
           },
           {
-            "src": "1024.png",
+            "src": "images/1024.png",
             "sizes": "1024x1024"
           }
     ],
