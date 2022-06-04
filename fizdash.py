@@ -256,7 +256,7 @@ dbc.Navbar(
                     [   
                         
 
-                        dbc.Col(html.Img(src='/assets/logo.png', height="45px")),
+                        dbc.Col(html.Img(src='/assets/logo.png', height="50px")),
                         dbc.Col(dbc.NavbarBrand("Financial Insight Zambia", className="ms-2", style={'fontSize':30})),
                     ],
                     align="center",
