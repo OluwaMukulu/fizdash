@@ -12,6 +12,43 @@ REMOTE_DATABASE_URI = 'postgresql+psycopg2://hpxywmetxvdawa:15a82606c74096ef3ae1
 
 app = Dash(__name__,title='Dashboard - Financial Insight Zambia',meta_tags=[{'name': 'viewport',
                             'content': 'width=device-width, initial-scale=1.0, maximum-scale=1.2, minimum-scale=0.5,'}])
+
+app.index_string = '''<!DOCTYPE html>
+<html>
+<head>
+<title>FIZ Dash</title>
+<link rel="manifest" href="./assets/manifest.json" />
+{%metas%}
+{%favicon%}
+{%css%}
+</head>
+<script type="module">
+   import 'https://cdn.jsdelivr.net/npm/@pwabuilder/pwaupdate';
+   const el = document.createElement('pwa-update');
+   document.body.appendChild(el);
+</script>
+<body>
+<script>
+  if ('serviceWorker' in navigator) {
+    window.addEventListener('load', ()=> {
+      navigator
+      .serviceWorker
+      .register('./assets/sw01.js')
+      .then(()=>console.log("Ready."))
+      .catch(()=>console.log("Err..."));
+    });
+  }
+</script>
+{%app_entry%}
+<footer>
+{%config%}
+{%scripts%}
+{%renderer%}
+</footer>
+</body>
+</html>
+'''
+
 server =app.server
 
 engine = create_engine(REMOTE_DATABASE_URI)
