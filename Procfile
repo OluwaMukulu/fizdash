@@ -1,1 +1,1 @@
-web: gunicorn fiz:server
+web: gunicorn fizdash:server
